@@ -1,0 +1,30 @@
+{% extends "event.html" %}
+{% load static %}
+
+{% block content %}
+<header>
+  <div class="flex px-[20px] py-[10px] border-b-[0.5px] border-gray-300 items-center h-[50px] overflow-hidden">
+    <span class="material-symbols-outlined">
+      <a href="{% url 'index' %}">
+        arrow_back
+      </a>
+    </span>
+    <p class="text-center flex justify-center items-center mx-auto">
+      <img src="{% static 'img/event.svg' %}" alt="Logo Event" class="w-[150px] h-[50px] object-cover"/>
+    </p>
+  </div>
+</header>
+<main class="px-[20px] py-2.5">
+  <section class="h-[50px]">
+    <div class="w-full p-2.5">
+      <p class="text-[13px] text-center text-[#343A40] font-[500]">Vous êtes déjà organisateur sur Event ?
+        <span>
+          <a href="" class="text-[#FF0000] font-[700] ml-2.5 text-[14px]">
+            se connecter
+          </a>
+        </span>
+      </p>
+    </div>
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "event.html" %}
+{% load static %}
+
+{% block content %}
+<!-- First Section -->
+<section class="relative h-auto">
+  <!-- Mask black -->
+  <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center opacity-25 bg-[#000]"></div>
+
+  <!-- Image for the first section -->
+  <img src="{% static 'img/affiche.jpeg' %}" alt="event image" class="w-full h-full object-cover" />
+
+  <!-- Container for the first section -->
+  <div class="absolute flex flex-col w-full h-full top-0 justify-between">
+    
+    <div class="flex flex-row items-center justify-center mt-[20px]">
+      <img src="{% static 'img/event.svg' %}" alt="event logo" class="w-[300px] h-[100px] object-cover" />
+    </div>
+  
+    <div class="relative w-full flex flex-col px-[20px] pt-2.5 pb-[20px]">
+      
+      <h1 class="text-white font-black text-start flex flex-col text-[30px] z-50">
+        <span class="text-shadow-lg">L'accès simplifié,</span>
+        <span>Aux évènements.</span>
+      </h1>
+      <div class="grid grid-cols-2 mt-[10px] z-50 gap-[10px]">
+        <a href="{% url 'organ-login' %}" class="outline-none z-50">
+          <div class="p-[10px] rounded-lg flex flex-col items-center justify-center bg-[#FF0000] text-white">
+            <span class="material-symbols-outlined text-[35px]">
+            event_upcoming
+            </span>
+            <span class="text-white font-[600]">
+            Organisateur
+            </span>
+          </div>
+        </a>
+        <a href="" class="outline-none z-50">
+          <div class="p-[10px] rounded-lg flex flex-col items-center justify-center bg-[#FF0000] text-white">
+            <span class="material-symbols-outlined text-[35px]">
+            book_online
+            </span>
+            <span class="text-white font-[600]">
+            Participant
+            </span>
+          </div>
+        </a>
+      </div>
+      
+      <div class="absolute w-full h-full top-0 left-0 right-0 bottom-0 bg-black opacity-50">
+      </div>
+      
+    </div>
+  <!-- End container for the first section-->
+    
+  </div>
+</section>
+<!-- End First Section -->
+
+<!-- Secind section -->
+<section>
+  <div class="px-[20px] py-[15px] w-full">
+    <h1 class="text-[30px] font-bold text-[#343A40]">Nous ?</h1>
+    <blockquote class="my-2 text-[20px] font-[600] text-[#343A40]">
+      “Nous avons créé cette application avec une vision claire: simplifier et moderniser l'expérience d'achat de billets pour vos événements préférés. Notre engagement envers la technologie et l'innovation vise à faciliter la vie des organisateurs et des participants.”<br />
+      <cite class="text-[14px] font-normal">Yann Wilfried MOUTSINGA, Fondateur de Event.</cite>
+    </blockquote>
+  </div>
+</section>
+
+{% endblock %}
